@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to right top, #051937, #004d7a80, #008793, #00bf73, #a6eb12);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+}
+
+.quoteBox{
+    width: 70%;
+    height: 60%;
+    z-index: 0;
+    top:10%;
+    border-radius: 10px 10px 0% 0%;
+    position: absolute;
+    background: rgb(211 211 211 / 30%);
+    overflow: auto;
+
+}
+
+.quoteBox p{
+    margin: 30px auto;
+    max-width: 70%;
+}
+
+.quoteBox img{
+    width: 100px;
+    margin-top: 15px;
+}
+
+#quote{
+    color: #fff;
+    font-size: x-large;
+}
+
+.container{
+    width: 70%;
+    height: 20%;
+    z-index: 1;
+    top:70%;
+    border-radius: 0% 0% 10px 10px;
+    position: absolute;
+    background: rgb(20 20 19 / 30%);
+}
+
+.container2{
+    width: 50%;
+    height: 20%;
+    z-index: 1;
+    top:60%;
+    border-radius: 10px;
+    position: absolute;
+    background: #e6e6e6;
+}
+
+
+.glow-on-hover {
+    margin-top: 30px;
+    padding: 15px 30PX;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 30px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #051937, #004d7a80, #008793, #00bf73, #a6eb12);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 30px;
+}
+
+.glow-on-hover:active {
+    color: #fff
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #00bf73;
+    left: 0;
+    top: 0;
+    border-radius: 30px;
+}
+
